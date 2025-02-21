@@ -10,11 +10,6 @@ export default async function ProjectsPage() {
   const featured = allProjects.find((project) => project.slug === "deltalex")!;
   const top2 = allProjects.find((project) => project.slug === "wnk")!;
   const top3 = allProjects.find((project) => project.slug === "weatherApp")!;
-  const sorted = allProjects.sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    );
 
   return (
     <div className="relative pb-16">
